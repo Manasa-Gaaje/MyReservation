@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PottiModel1StoreContainer" CdmEntityContainer="PottiEntities2">
+    <EntitySetMapping Name="Reservations">
+      <EntityTypeMapping TypeName="PottiModel1.Reservation">
+        <MappingFragment StoreEntitySet="Reservation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Hotel" ColumnName="Hotel" />
+          <ScalarProperty Name="Arrival" ColumnName="Arrival" />
+          <ScalarProperty Name="Depature" ColumnName="Depature" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Guests" ColumnName="Guests" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Sp_GetAll" FunctionName="PottiModel1.Store.Sp_GetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PottiModel1.Sp_GetAll_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Hotel" ColumnName="Hotel" />
+          <ScalarProperty Name="Arrival" ColumnName="Arrival" />
+          <ScalarProperty Name="Depature" ColumnName="Depature" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Guests" ColumnName="Guests" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

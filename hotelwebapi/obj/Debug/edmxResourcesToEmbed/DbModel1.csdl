@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PottiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Emp1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="phonenumber" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="PottiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Emp1" EntityType="Self.Emp1" />
+  </EntityContainer>
+</Schema>

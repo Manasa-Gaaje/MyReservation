@@ -1,0 +1,46 @@
+<form [formGroup]="add">
+<button class="btn btn-danger cross">X</button>
+
+<h1>Add Details</h1>
+<label>id:</label>
+<input type="number" placeholder="id" formControlName ="id" />
+<div>
+<label>Hotel:</label>
+<input type="text" placeholder="Hotel" formControlName ="Hotel" />
+</div>
+
+<div>
+<label>Arrival:</label>
+<input type="date" formControlName ="Arrival" />
+</div>
+
+<div>
+<label>Depature:</label>
+<input type="date" formControlName ="Depature" />
+</div>
+
+<div>
+<label for="Type">Choose Type:</label>
+
+<select formControlName = "Type">
+  <option value="Economy">Economy</option>
+  <option value="Suite">Suite</option>
+  <option value="Luxury Suite">Luxury Suite</option>
+  <option value="Double">Double</option>
+</select>
+</div>
+
+<div>
+<label>Guests:</label>
+<input type="number" formControlName ="Guests" />
+</div>
+<div>
+<label>price:</label>
+<input type="number" formControlName ="price"/>
+</div>
+<div>
+  <button (click)="save()" class="btn btn-primary save-button" >Save</button>
+  <button class="btn btn-primary">Reset</button>
+</div>
+</form>
+
